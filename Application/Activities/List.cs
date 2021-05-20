@@ -29,12 +29,12 @@ namespace Application.Activities
             {
                 try
                 {
-                    for (int i = 0; i < 10; i++)
-                    {
-                        cancellationToken.ThrowIfCancellationRequested();
-                        await Task.Delay(1000, cancellationToken);
-                        _logger.LogInformation($"Task{i} has completed");
-                    }
+                    // for (int i = 0; i < 10; i++)
+                    // {
+                    //     cancellationToken.ThrowIfCancellationRequested();
+                    //     await Task.Delay(1000, cancellationToken);
+                    //     _logger.LogInformation($"Task{i} has completed");
+                    // }
                 }
                 catch (System.Exception ex) when (ex is TaskCanceledException)
                 {
